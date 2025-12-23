@@ -1,16 +1,17 @@
-import { ApolloClient, InMemoryCache, HttpLink, from } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 let client: ApolloClient<any> | null = null;
 
-export function getApolloClient() {
-    if (!client || typeof window === 'undefined') {
-        client = new ApolloClient({
-            ssrMode: typeof window === 'undefined',
-            link: from([
-                new HttpLink({
-                    uri: 'https://mcstaging.c-monetiquette.fr/graphql'
-                })
-            ]),
+export function getClient() {
+    // Create a new client for each request on the server
+    // This ensures we don't share cache between requests
+    if (typeof window === 'undefined') {
+        return new ApolloClient({
+            ssrMode: true,
+            link: new HttpLink({
+                uri: 'https://mcstaging.c-monetiquette.fr/graphql'
+                // No fetchOptions - let Next.js handle caching via revalidate
+            }),
             cache: new InMemoryCache({
                 typePolicies: {
                     Query: {
@@ -24,7 +25,29 @@ export function getApolloClient() {
             })
         });
     }
+
+    // Reuse client on the browser
+    if (!client) {
+        client = new ApolloClient({
+            link: new HttpLink({
+                uri: 'https://mcstaging.c-monetiquette.fr/graphql'
+            }),
+            cache: new InMemoryCache({
+                typePolicies: {
+                    Query: {
+                        fields: {
+                            getHomePageData: {
+                                merge: true
+                            }
+                        }
+                    }
+                }
+            })
+        });
+    }
+
     return client;
 }
 
-export const getClient = getApolloClient;
+// Alias for backward compatibility
+export const getApolloClient = getClient;
