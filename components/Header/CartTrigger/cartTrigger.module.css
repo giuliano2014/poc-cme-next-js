@@ -1,0 +1,49 @@
+.root {
+    display: flex;
+    align-items: center;
+}
+
+.sofiaPro {
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.triggerContainer {
+    position: relative;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.trigger:hover {
+    opacity: 0.7;
+}
+
+.triggerIcon {
+    width: 25px;
+    height: 24px;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #bc7d6f;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}

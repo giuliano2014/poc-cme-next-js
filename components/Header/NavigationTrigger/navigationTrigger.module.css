@@ -1,0 +1,267 @@
+/* Trigger button - visible only on mobile */
+.triggerRoot {
+    display: none;
+}
+
+.triggerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.triggerButton:hover {
+    opacity: 0.7;
+}
+
+.triggerIcon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile menu root */
+.root {
+    background-color: #fff;
+    position: fixed;
+    top: 86px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 90;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition-duration: 300ms;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+}
+
+.rootOpen {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    overflow: auto;
+    pointer-events: auto;
+}
+
+/* Mega banner */
+.megaBanner {
+    background-color: #ba453b;
+    color: white;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 2rem;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+}
+
+.titleBanner {
+    font-family: 'Sofia Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+}
+
+.barBanner {
+    height: 2px;
+    width: 100px;
+    background-color: white;
+}
+
+.subtitleBanner {
+    font-family: 'Sofia Pro', sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 500;
+    padding-top: 0.3rem;
+}
+
+/* Body */
+.body {
+    min-height: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav item (category) */
+.listItem {
+    font-family: 'Sofia Pro', sans-serif;
+    letter-spacing: 0.53px;
+    color: #404143;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 2rem;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.listItem:last-of-type {
+    padding-bottom: 0.5rem;
+}
+
+.navName {
+    padding-left: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    text-align: left;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+.badgeWrapper {
+    margin-top: 0.5rem;
+}
+
+.badge {
+    margin-left: 2rem;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #ba453b;
+    border-radius: 20px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: none;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* Submenu */
+.containerClosed {
+    display: none;
+}
+
+.containerOpen {
+    display: flex;
+    flex-flow: column nowrap;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    background-color: #fff6f0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 1rem 0 0.5rem 3rem;
+    width: 100%;
+}
+
+.subAnchor {
+    margin-bottom: 1rem;
+    color: #404143;
+    text-decoration: none;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.subAnchor:hover {
+    color: #6cb2bb;
+}
+
+.badgeSmall {
+    color: #ba453b;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 1rem;
+}
+
+/* Flags section */
+.flags {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+    text-decoration: none;
+    color: inherit;
+}
+
+.flagImage {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flagTitle {
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 12px;
+    margin-top: 1rem;
+    color: #404143;
+}
+
+.flagSubtitle {
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 12px;
+    color: #404143;
+}
+
+/* Nav items (shipping, FAQ, account) */
+.navItem {
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    color: #404143;
+    text-decoration: none;
+    align-items: center;
+}
+
+.navItem:last-of-type {
+    padding-bottom: 2rem;
+}
+
+.navItemIcon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Show trigger only on mobile */
+@media (max-width: 1200px) {
+    .triggerRoot {
+        display: flex;
+    }
+}

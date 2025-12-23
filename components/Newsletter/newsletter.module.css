@@ -1,0 +1,219 @@
+.root {
+    position: relative;
+    width: 100%;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.form {
+    margin-top: 16px;
+}
+
+.formLabel {
+    position: absolute;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Sofia Pro', sans-serif;
+    color: #bc7d6f;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.newsletterInput {
+    width: 100%;
+    padding: 19px 120px 18px 24px;
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: 'Sofia Pro', sans-serif;
+    color: #366b7a;
+    font-weight: 500;
+    line-height: 20px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background-color: #ffffff;
+}
+
+.newsletterInput:focus {
+    border-color: #336a79;
+}
+
+.newsletterInput::placeholder {
+    color: #999;
+}
+
+.newsletterInputError {
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 19px 120px 18px 24px;
+    border-radius: 10px;
+    font-family: 'Sofia Pro', sans-serif;
+    color: #366b7a;
+    font-weight: 400;
+    border: 1px solid #e02b27;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.errorMessage {
+    width: 100%;
+    padding: 8px 16px 18px 4px;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 10px;
+    font-family: 'Sofia Pro', sans-serif;
+    color: #e02b27;
+    font-weight: 400;
+}
+
+.subscribeButton {
+    position: absolute;
+    height: 100%;
+    min-width: 4em;
+    color: #bc7d6f;
+    right: 0;
+    top: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 16px;
+    font-family: 'Sofia Pro', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.subscribeButton:hover {
+    opacity: 0.7;
+}
+
+.subscribeButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.newsletterText {
+    font-family: 'Sofia Pro', sans-serif;
+    color: #bc7d6f;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.loadingContainer {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.responseText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: 'Sofia Pro', sans-serif;
+    color: #336a79;
+    padding-top: 4px;
+    padding: 8px 16px 18px 4px;
+}
+
+.separator {
+    background-color: #bc7d6f;
+    height: 1px;
+    width: 98px;
+    margin: 16px 0;
+}
+
+.socialMediaContainer {
+    display: none;
+}
+
+.socialMediaListDesktop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+    max-width: 177px;
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.socialMediaListMobile {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.socialIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.socialIcon:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .root {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .socialMediaContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .title {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 8px;
+    }
+
+    .socialMediaListMobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        gap: 16px;
+        max-width: 170px;
+    }
+
+    .separator,
+    .socialMediaListDesktop {
+        display: none;
+    }
+
+    .responseText {
+        padding: 19px 16px 18px 24px;
+    }
+
+    .newsletterInputError,
+    .errorMessage {
+        padding: 19px 16px 18px 24px;
+    }
+}

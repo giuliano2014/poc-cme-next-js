@@ -1,0 +1,28 @@
+.root {
+    display: flex;
+    align-items: center;
+}
+
+.sofiaPro {
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}

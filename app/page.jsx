@@ -7,7 +7,7 @@ const ProductSlider = dynamic(() => import('@/components/ProductSlider'), {
     loading: () => <div className="h-96 animate-pulse bg-gray-100" />
 });
 
-const Header = dynamic(() => import('@/components/Header'), {
+const HeroBanner = dynamic(() => import('@/components/HeroBanner'), {
     loading: () => <div className="h-32 animate-pulse bg-gray-100" />
 });
 
@@ -57,8 +57,7 @@ export default async function Home() {
 
     return (
         <div className="mb-8">
-            {/* <Banner header={homeData?.header} /> */}
-            <Header header={homeData?.header} meta={homeData?.meta} />
+            <HeroBanner header={homeData?.header} meta={homeData?.meta} />
             <ProductSlider productSlider={homeData?.product_slider} />
             <Essentials essentials={homeData?.essentials} />
             <MultiRowSlider parentSelection={homeData?.parent_selection} />

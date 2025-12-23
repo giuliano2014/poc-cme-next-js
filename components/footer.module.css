@@ -1,0 +1,304 @@
+.root {
+    box-sizing: border-box;
+    width: 100vw;
+    font-family: 'Sofia Pro', sans-serif;
+    position: relative;
+    z-index: 3;
+}
+
+.footerContainer {
+    background-color: #fff6ef;
+    padding: 24px 20px 34px 20px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.logosContainer {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    max-width: 308px;
+    gap: 16px;
+}
+
+.cMonLogo {
+    max-height: 93px;
+    height: 100%;
+}
+
+.cMonLogoImg {
+    height: 93px;
+    width: auto;
+}
+
+.euroLogos {
+    width: 74%;
+}
+
+.regionText {
+    width: 100%;
+    font-family: 'Sofia Pro', sans-serif;
+    color: #336a79;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.regionText li {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    align-items: flex-start;
+}
+
+.separator {
+    width: 68px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #336a79;
+}
+
+.europeFlag {
+    width: 61px;
+}
+
+.regionFlag {
+    width: 89px;
+    vertical-align: top;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.linkGroupContainer {
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+    width: 60%;
+    color: #336a79;
+}
+
+.linkGroupContainer ul {
+    width: 100%;
+}
+
+.linkGroup {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categoryName {
+    font-family: 'Sofia Pro', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0;
+}
+
+.linkItem {
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    list-style: none;
+}
+
+.linkItem a {
+    color: #336a79;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.linkItem a:hover {
+    opacity: 0.7;
+}
+
+.linksButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #336a79;
+    font-size: 14px;
+    padding: 0;
+}
+
+.linksButton:hover {
+    opacity: 0.7;
+}
+
+.newsletter {
+    width: 335px;
+}
+
+.accordionTitle {
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #336a79;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.accordionContent {
+    display: none;
+    font-family: 'Sofia Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #336a79;
+    line-height: 22px;
+}
+
+.accordionContent.open {
+    display: block;
+}
+
+.accordionIcon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.infoContainer {
+    background-color: white;
+    padding: 2rem 1rem;
+    font-size: 10px;
+    line-height: 18px;
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    color: #336a79;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.categorySeparator {
+    height: 1px;
+    background-color: #336a79;
+    width: 100%;
+    margin: 16px 0;
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+    .footerContainer {
+        padding: 24px 20px 34px 20px;
+    }
+
+    .logosContainer {
+        display: flex;
+        width: 100%;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 650px;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    .cMonLogo {
+        width: 24%;
+    }
+
+    .cMonLogoImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .euroLogos {
+        width: 74%;
+    }
+
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 16px;
+        align-items: flex-start;
+    }
+
+    .separator {
+        width: 1px;
+        height: 63px;
+        margin: auto 0;
+        background-color: #336a79;
+    }
+
+    .europeFlag {
+        width: 61px;
+    }
+
+    .regionFlag {
+        width: 89px;
+        vertical-align: top;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .linkGroupContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .categorySeparator {
+        display: none;
+    }
+
+    /* Show accordion on mobile */
+    .desktopOnly {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .desktopOnly {
+        display: block;
+    }
+
+    .mobileOnly {
+        display: none;
+    }
+}

@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { Providers } from './providers';
 import './globals.css';
 import Footer from '@/components/footer';
-import Header from '@/components/header';
+import Header from '@/components/Header';
 
 const geistSans = Geist({
     subsets: ['latin'],

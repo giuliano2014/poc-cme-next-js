@@ -1,0 +1,161 @@
+.root {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 80;
+    position: sticky;
+    box-shadow: 0 0 1.5em #00000030;
+    text-transform: uppercase;
+}
+
+.newRoot {
+    background-color: #fff;
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 209px;
+    z-index: 100;
+    transition: top 0.3s ease-in;
+}
+
+.sofiaPro {
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.newRootAbsolute {
+    top: -209px;
+}
+
+.homeLinkContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImg {
+    height: 50px;
+    width: auto;
+}
+
+.newActionsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4%;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+    position: relative;
+}
+
+.newToolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2%;
+    height: 5.5rem;
+    font-size: 0.96em;
+    text-transform: uppercase;
+}
+
+.navSectionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.extraSpaceDiv {
+    height: 204px;
+}
+
+/* Checkout header */
+.checkoutV3Root {
+    height: 80px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.checkoutV3NavContainer {
+    padding: 15px 20px;
+    height: 80px;
+}
+
+.v3backButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.hiddenAccountButton {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .newRoot {
+        height: auto;
+    }
+
+    .newActionsContainer {
+        height: 50px;
+    }
+
+    .actions {
+        padding: 0;
+        border-bottom: none;
+        height: 50px;
+    }
+
+    .logoImg {
+        height: 40px;
+    }
+
+    .homeLinkContainer {
+        justify-content: flex-start;
+        padding-left: 5%;
+    }
+
+    .extraSpaceDiv {
+        height: 86px;
+    }
+
+    .newToolbar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .newRootAbsolute {
+        top: -90px;
+    }
+
+    .checkoutV3NavContainer {
+        padding: 10px 14px;
+        height: 50px;
+    }
+
+    .v3backButton {
+        gap: 4px;
+    }
+}

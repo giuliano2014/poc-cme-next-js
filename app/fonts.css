@@ -1,0 +1,25 @@
+/* Sofia Pro Font Face Definitions */
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('/fonts/SofiaPro/Sofia Pro Regular Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('/fonts/SofiaPro/Sofia Pro Medium Az.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('/fonts/SofiaPro/Sofia Pro Bold Az.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
