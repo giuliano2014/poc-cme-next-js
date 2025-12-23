@@ -1,0 +1,206 @@
+.root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: 'Sofia Pro';
+}
+.root_shimmer {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 324px;
+    background: #f7f8f9;
+}
+:root {
+    --product-thumb-color: #666464;
+    --product-track-color: #bdb9b9;
+}
+.productColorList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 8px;
+}
+
+.productColor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 4px;
+    box-sizing: border-box;
+}
+.productColor.productColorContrast {
+    border: 1px solid #333333;
+}
+.slide {
+    padding: 0 18px;
+    width: 272px;
+    min-width: 272px;
+    max-width: 272px;
+}
+.slideList {
+    margin: 0 -18px;
+    max-width: 1052px;
+}
+
+.headline {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+}
+.img_container {
+    position: relative;
+    width: 236px;
+    height: 220px;
+}
+.img_container img {
+    width: 100%;
+    height: 100%;
+}
+.productTag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.horizontalSlider {
+    overflow: hidden;
+    max-height: 600px;
+    width: 100%;
+    max-width: 1090px;
+    position: relative;
+    height: 349px;
+}
+.sliderContainer {
+    overflow-x: scroll;
+    inset: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--product-thumb-color);
+    scrollbar-track-color: var(--product-track-color);
+}
+.slidesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+.sliderContainer::-webkit-scrollbar {
+    height: 4px;
+    cursor: pointer;
+}
+.sliderContainer::-webkit-scrollbar-track {
+    background-color: var(--product-track-color);
+    border-radius: 4px;
+}
+.sliderContainer::-webkit-scrollbar-thumb {
+    background-color: var(--product-thumb-color);
+    border-radius: 4px;
+}
+.prevArrow {
+    position: absolute;
+    left: 5%;
+    top: 110px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+.nextArrow {
+    position: absolute;
+    right: 5%;
+    top: 110px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+.textContainer {
+    padding: 16px 10px;
+}
+.secondaryText {
+    line-height: 13px;
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8px;
+}
+@media screen and (max-width: 768px) {
+    .root {
+        margin-bottom: 0;
+    }
+    .root_shimmer {
+        margin-bottom: 0;
+        height: 277px;
+    }
+    .img_container {
+        width: 140px;
+        height: 140px;
+    }
+    .prevArrow,
+    .nextArrow {
+        display: none !important;
+    }
+    .slide {
+        width: 164px;
+        min-width: 164px;
+        max-width: 164px;
+        padding: 0 12px;
+    }
+    .horizontalSlider {
+        height: 277px;
+    }
+    .ios .horizontalSlider {
+        height: 227px;
+    }
+    .ios .slidesContainer {
+        margin-bottom: 1.5rem;
+    }
+    .slide:first-of-type {
+        padding-left: 0;
+    }
+    .headline {
+        line-height: 14px;
+        font-size: 14px;
+    }
+    .secondaryText {
+        font-size: 10px;
+        line-height: 9.25px;
+        margin-top: 5px;
+    }
+    .textContainer {
+        padding: 8px 10px 0 10px;
+        min-height: 52px;
+        height: 52px;
+    }
+    .productColorList {
+        margin-top: 5px;
+    }
+    .secondaryText {
+        font-size: 12px;
+        line-height: 11px;
+        font-weight: 400;
+    }
+    .productColor {
+        width: 8px;
+        height: 8px;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .prevArrow {
+        left: 0px;
+    }
+    .nextArrow {
+        right: 0;
+    }
+}

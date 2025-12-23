@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { getClient } from '@/lib/apollo-client';
 import { GET_HOME_PAGE_DATA } from '@/lib/queries';
 
-const ProductSlider = dynamic(() => import('@/components/product-slider'), {
+const ProductSlider = dynamic(() => import('@/components/ProductSlider'), {
     loading: () => <div className="h-96 animate-pulse bg-gray-100" />
 });
 
