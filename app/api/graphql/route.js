@@ -1,5 +1,5 @@
 export async function POST(request) {
-    const STAGING_API_URL = 'https://mcstaging.petit-fernand.it/graphql';
+    const STAGING_API_URL = 'https://mcstaging.c-monetiquette.fr/graphql';
 
     try {
         const body = await request.json();

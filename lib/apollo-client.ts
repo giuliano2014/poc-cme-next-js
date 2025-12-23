@@ -8,8 +8,7 @@ export function getApolloClient() {
             ssrMode: typeof window === 'undefined',
             link: from([
                 new HttpLink({
-                    uri: 'https://mcstaging.petit-fernand.it/graphql',
-                    fetchOptions: { cache: 'no-store' }
+                    uri: 'https://mcstaging.c-monetiquette.fr/graphql'
                 })
             ]),
             cache: new InMemoryCache({
