@@ -77,7 +77,6 @@
 
 @theme inline {
     --font-sans: 'Geist', 'Geist Fallback';
-    --font-sofia-pro: var(--font-sofia-pro);
     /* Suppression de --font-mono inutilisée */
     --color-background: var(--background);
     --color-foreground: var(--foreground);
