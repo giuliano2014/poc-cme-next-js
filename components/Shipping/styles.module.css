@@ -1,0 +1,73 @@
+.root {
+    width: 100%;
+    text-align: center;
+    padding: 32px 0;
+}
+.root_shimmer {
+    width: 100%;
+    padding: 32px 0;
+    height: 233px;
+    background: #f7f8f9;
+}
+.mainText {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    font-family: 'Sofia Pro';
+}
+
+.secondaryText {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 32px;
+    font-family: 'Sofia Pro';
+}
+.shippingIcon {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.separator {
+    height: 1px;
+    width: 86px;
+    margin: 24px auto;
+}
+.button {
+    margin-top: 12px;
+    border-radius: 20px;
+    padding: 4px 16px 4px 16px;
+    font-size: 20px;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+}
+.secondaryText span {
+    white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+    .root_shimmer {
+        height: 215px;
+    }
+    .mainText {
+        font-size: 18px;
+        width: 50%;
+        line-height: 23px;
+    }
+    .secondaryText {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .button {
+        font-size: 14px;
+        margin-top: 8px;
+        line-height: 18px;
+    }
+}

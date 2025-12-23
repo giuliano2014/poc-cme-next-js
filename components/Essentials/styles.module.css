@@ -1,0 +1,296 @@
+.wrapper {
+    width: 100%;
+}
+.root {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 2rem 1rem 1rem 2rem;
+    position: relative;
+    width: 100%;
+}
+.root_shimmer {
+    width: 100%;
+    padding: 2rem 0 1rem 2rem;
+    height: 513px;
+    background: #f7f8f9;
+}
+:root {
+    --essentials-thumb-color: #666464;
+    --essentials-track-color: #bdb9b9;
+}
+.mainImage {
+    max-width: 340px;
+}
+.sliderContainer {
+    max-width: 60%;
+    width: 100%;
+}
+.titleDektop {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+}
+.titleDektop strong {
+    font-weight: 700;
+}
+.slide {
+    padding: 0 36px 0 0;
+}
+.slide:last-of-type {
+    padding: 0;
+}
+.slideList {
+    max-width: 100%;
+    height: 360px;
+}
+.text {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    padding: 10px 8px;
+}
+.text .headline {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    font-family: 'Sofia Pro';
+}
+.mainImageText .headline {
+    font-family: 'Sofia Pro';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+}
+.img_container {
+    position: relative;
+    height: 360px;
+    width: 280px;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flags {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 453px;
+}
+.flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+}
+.flagImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.flagTitle {
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 16px;
+    margin-top: 0.5rem;
+    font-family: 'Sofia Pro';
+}
+.flagSubtitle {
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 16px;
+    font-family: 'Sofia Pro';
+}
+.mainImgContainer {
+    position: relative;
+    height: 453px;
+}
+.mainImageText {
+    font-size: 16px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 14px 16px;
+}
+.titleMobile {
+    display: none;
+}
+.horizontalSlider {
+    overflow: hidden;
+    max-height: 600px;
+    position: relative;
+    height: 420px;
+}
+.slider {
+    overflow-x: scroll;
+    inset: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--essentials-thumb-color);
+    scrollbar-track-color: var(--essentials-track-color);
+}
+.slidesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.slider::-webkit-scrollbar {
+    height: 4px;
+    cursor: pointer;
+}
+.slider::-webkit-scrollbar-track {
+    background-color: var(--essentials-track-color);
+    border-radius: 4px;
+}
+.slider::-webkit-scrollbar-thumb {
+    background-color: var(--essentials-thumb-color);
+    border-radius: 4px;
+}
+.prevArrow {
+    position: absolute;
+    left: 42%;
+    top: 50%;
+    z-index: 5;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+.nextArrow {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    z-index: 5;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+@media screen and (max-width: 1220px) {
+    .sliderContainer {
+        max-width: 50%;
+    }
+    .prevArrow {
+        left: 52%;
+    }
+}
+@media screen and (max-width: 950px) {
+    .sliderContainer {
+        max-width: 40%;
+    }
+    .prevArrow {
+        left: 62%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .root {
+        flex-direction: column;
+        padding: 10px 0 10px 20px;
+        gap: 24px;
+    }
+    .root_shimmer {
+        padding: 10px;
+        height: 871px;
+    }
+    .slide {
+        padding: 0 12px;
+    }
+    .slide:first-of-type {
+        padding: 0 12px 0 0;
+    }
+    .slide:last-of-type {
+        padding: 0 0 0 12px;
+    }
+    .slideList {
+        max-width: 100%;
+    }
+    .titleDektop {
+        display: none;
+    }
+    .titleMobile {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: 'Sofia Pro';
+        padding-right: 20px;
+        line-height: 34px;
+    }
+    .titleMobile strong {
+        font-weight: 700;
+        font-family: 'Sofia Pro';
+    }
+    .flags {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-right: 20px;
+    }
+    .flagImage {
+        width: 65px;
+        height: 65px;
+    }
+    .flagTitle,
+    .flagSubtitle {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .mainImgContainer {
+        height: 254px;
+        padding-right: 20px;
+    }
+    .mainImage {
+        max-width: 100%;
+    }
+    .mainImageText .headline {
+        font-size: 18px;
+    }
+    .sliderContainer {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    .ios .sliderContainer {
+        margin-bottom: 0.5rem;
+    }
+    .ios .slidesContainer {
+        margin-bottom: 1.5rem;
+    }
+    .slideList {
+        height: 254px;
+    }
+    .img_container {
+        height: 254px;
+        width: 198px;
+    }
+    .horizontalSlider {
+        height: auto;
+    }
+    .prevArrow,
+    .nextArrow {
+        display: none !important;
+    }
+    .text .headline {
+        font-size: 12px;
+        letter-spacing: -0.25px;
+        word-spacing: -0.25px;
+        line-height: 21px;
+    }
+    .text {
+        padding: 4px 8px;
+        width: 169px;
+    }
+}
